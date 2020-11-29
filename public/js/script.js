@@ -1,6 +1,5 @@
-var navitiaToken = process.env.navitiaToken;
-var mapboxToken = process.env.mapboxToken;
-
+const navitiaToken =  '8088bf3d-6b41-4a23-9f88-185a03876f48' //process.env.navitiaToken;
+const mapboxToken = 'pk.eyJ1IjoidGxvaXplbCIsImEiOiJja2kxdjJqcTcweTZsMnpxa3pucjh0cDlqIn0.ipiemX96csHDUZvs8LELSg' //process.env.mapboxToken; 
 
 // Isochron starting point
 var mapStart = [48.85703068536193, 2.3405350766242536];
