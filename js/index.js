@@ -3,7 +3,7 @@
 
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000; //3000 FOR LOCAL TESTING process.env.PORT || 
+const port = process.env.PORT || 4000; //3000 FOR LOCAL TESTING process.env.PORT || 
 
 app.listen(port, () => {
   console.log(`Server running`);
@@ -16,5 +16,5 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static('index.html')); //ability to host static files
+app.use(express.static('public')); //ability to host static files
 app.use(express.json()); //ability to parse data as json
