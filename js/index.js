@@ -3,7 +3,6 @@
 
 const express = require('express');
 const app = express();
-const mysql = require('mysql');
 const port = process.env.PORT || 3000; //3000 FOR LOCAL TESTING process.env.PORT || 
 
 app.listen(port, () => {
@@ -11,11 +10,11 @@ app.listen(port, () => {
 });
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://notyoutube.dev');//THIS * MUST BE CHANGED TO NOTYOUTUBE WEBSITE ONLY //https://notyoutube.dev
+  res.header('Access-Control-Allow-Origin', '*');//THIS * MUST BE CHANGED TO NOTYOUTUBE WEBSITE ONLY //https://notyoutube.dev
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Accept');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
   next();
 });
 
-app.use(express.static('js')); //ability to host static files
+app.use(express.static('index.html')); //ability to host static files
 app.use(express.json()); //ability to parse data as json
