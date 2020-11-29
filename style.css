@@ -1,0 +1,59 @@
+body {
+    font-family: Arial
+}
+
+h1 {
+    text-align: center;
+    font-size: 5vh;
+}
+
+h2 {
+    text-align: center;
+    font-size: 4vh;
+    margin-block-start: 0.2vh;
+    margin-block-end: 0.2vh;
+}
+
+.green {
+    color: #0ED52D
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.4vh;  
+    margin-block-start: 0.2vh;
+    margin-block-end: 0.2vh;
+}
+
+.flex-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#city {
+    font-size: 3vh;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2vh;
+}  
+
+#map {
+    height: 50vh;
+    width: 50%;
+    margin: 2vh auto
+}
+
+#res {
+    text-align: center;
+    font-size: 4vh;
+    font-weight: 600;
+    margin-block-start: 0.2vh;
+    margin-block-end: 0.5vh;
+    margin-bottom: 5vh;
+}
+
+#appstore {
+    margin: 1vh
+}
