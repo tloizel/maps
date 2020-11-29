@@ -8,13 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "maps"
+    "url": "git+https://github.com/tloizel/maps.git"
   },
   "keywords": [
     "maps"
   ],
   "author": "Thomas Loizel",
   "license": "ISC",
+  "homepage": "https://github.com/tloizel/maps#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
