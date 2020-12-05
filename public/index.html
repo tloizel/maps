@@ -14,48 +14,44 @@
         integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
         crossorigin=""></script>
 
-    <!-- TO BE ADAPTED
+        <meta name="keywords" content="barycentre, carte, paris, map, rendez-vous"/>
+        <meta name="description" content="Barcentre est la solution pour trouver le point de rendez-vous qui arrange tout le monde."/>
+        <meta name="author" content="Thomas Loizel"/>
+        <title>Barycentre - Le point de rendez-vous préféré des Parisiens</title>
+        <link rel="icon" href="markerGreen.ico" type="image/ico"/>
+        <link rel="shortcut icon" href="markerGreen.ico" type="image/x-icon"/>
+        <!-- Open Graph -->
+        <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Barycentre - Le point de rendez-vous préféré des Parisiens"/>
+        <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Barycentre est la solution pour trouver le point de rendez-vous qui arrange tout le monde."/>
+        <meta prefix="og: http://ogp.me/ns#" property=”og:url” content=”http://barymap.herokuapp.com”/>
+        <meta prefix="og: http://ogp.me/ns#" property=”og:type” content=”website”/>
+        <meta prefix="og: http://ogp.me/ns#" property="og:image" content="http://barymap.herokuapp.com/markerGreen.png"/>
+        <meta prefix="og: http://ogp.me/ns#" property="og:image:alt" content="Barycentre"/>
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="Barycentre - Le point de rendez-vous préféré des Parisiens"/>
+        <meta name="twitter:description" content="Barycentre est la solution pour trouver le point de rendez-vous qui arrange tout le monde."/>
+        <meta name="twitter:site" content=”http://barymap.herokuapp.com”/>
+        <meta name="twitter:image" content="http://barymap.herokuapp.com/markerGreen.png"/>
+        <meta name="twitter:image:alt" content="Barycentre"/>
 
-    <meta name="keywords" content="notyoutube, incremental game, clicker"/>
-    <meta name="description" content="notYouTube, an incremental game for YouTube fame. Click your way to 100M subscribers."/>
-    <meta name="author" content="Thomas Loizel and Axel Von Arx"/>
-    <title>notYouTube - An incremental game for YouTube fame</title>
-    <link rel="icon" href="favicon.ico" type="image/ico"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    <!-- Open Graph --
-    <meta prefix="og: http://ogp.me/ns#" property="og:title" content="notYouTube - An incremental game for YouTube fame"/>
-    <meta prefix="og: http://ogp.me/ns#" property="og:description" content="Click your way to 100M subscribers"/>
-    <meta prefix="og: http://ogp.me/ns#" property=”og:url” content=”https://notyoutube.dev”/>
-    <meta prefix="og: http://ogp.me/ns#" property=”og:type” content=”website”/>
-    <meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://notyoutube.dev/media_image.jpg"/>
-    <meta prefix="og: http://ogp.me/ns#" property="og:image:alt" content="notYouTube"/>
-     <!-- Twitter --
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="notYouTube - An incremental game for YouTube fame"/>
-    <meta name="twitter:description" content="Click your way to 100M subscribers"/>
-    <meta name="twitter:site" content=”https://notyoutube.dev”/>
-    <meta name="twitter:image" content="https://notyoutube.dev/media_image.jpg"/>
-    <meta name="twitter:image:alt" content="notYouTube"/>
-
-    <!-- Global site tag (gtag.js) - Google Analytics --
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173995219-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-173995219-1');
-    </script>
+        <!-- Global site tag (gtag.js) - Google Analytics --
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173995219-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-173995219-1');
+        </script>
+        
+        <!-- Google Tag Manager --
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-P6ZPSHH');</script>
+        <!-- End Google Tag Manager --
     
-    <!-- Google Tag Manager --
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P6ZPSHH');</script>
-    <!-- End Google Tag Manager --
-    
-    TO BE ADAPTED --> 
-
     </head>
   
     <body>
@@ -69,7 +65,8 @@
         TO BE ADAPTED -->
 
         <h1 class='green'>Barycentre</h1>
-
+        
+        <!--
         <div class='flex-center'>
             <label for='city'></label>
             <input list='cities' id='city' name='city-choice' value='Paris'/>
@@ -78,19 +75,20 @@
                 <option value='Paris'>
             </datalist>
         </div>
+        -->
 
-        <p class='intro'><b>Pinch</b> to zoom</p>
-        <p class='intro'><b>Tap</b> to add address</p>
-        <p class='intro'><b>Reload</b> to start over</p>
+        <p class='intro'><b>Zoom</b> pour chercher</p>
+        <p class='intro'><b>Clique</b> pour calculer</p>
+        <p class='intro'><b>Recharge</b> pour recommencer</p>
 
         <div id='map'></div>
 
-        <h2>Your barycentre is</h2>
+        <h2>Ton barycentre est</h2>
         <p id='res' class='green'>. . .</p>
 
         <div class='flex-center'>
             <img id='appstore' src='appstore.png' alt='appstore' style='width:4vh'>
-            <p class='intro'> Download the app</p>
+            <p class='intro'>Télécharge l'application</p>
         </div>
 
         <script src='js/script.js' type='text/javascript'></script>

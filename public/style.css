@@ -57,3 +57,11 @@ h2 {
 #appstore {
     margin: 1vh
 }
+
+@media (max-width: 800px) {
+
+    #map {
+      width: 90%
+    }
+
+}
