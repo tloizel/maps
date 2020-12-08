@@ -41,6 +41,7 @@ function onMapClick(e) {
   //console.log(e.latlng)
   amountClicks();
   calculating(true)
+  document.getElementById('test').innerHTML= clicksOnMap + ' clicks and LeafletBug is ' + LeafletBug;
 }
 
 map.on('click', onMapClick);
