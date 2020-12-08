@@ -82,4 +82,4 @@ function mobileCheck () {
 };
 
 
-const LeafletBug = getBrowser() == 'Safari' && mobileCheck() == false;
+const LeafletBug = getBrowser() == 'Safari' //&& mobileCheck() == false;
