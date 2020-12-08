@@ -5,6 +5,7 @@ body {
 h1 {
     text-align: center;
     font-size: 5vh;
+    margin-block-start: 0.10em;
 }
 
 h2 {
@@ -74,6 +75,10 @@ h2 {
 }
 
 @media (min-width: 600px) {
+
+    h1 {
+        margin-block-start: 0.67em;
+    }
 
     .ad {
         display: block;
