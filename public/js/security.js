@@ -3,7 +3,7 @@ var wait = false;
 
 function amountClicks(){
     clicksOnMap ++ ;
-    if(clicksOnMap > 10){
+    if(!LeafletBug && clicksOnMap > 10 || LeafletBug && clicksOnMap > 20){
         document.getElementById('map').style.pointerEvents = 'none';
     }
 }

@@ -46,10 +46,14 @@ function onMapClick(e) {
 map.on('click', onMapClick);
 
 function drawBarycentre(baryCoord){
-  if (clicksOnMap <= 2) {
+  let minClick = 2;
+  if (barycenterMarker == undefined) {
     barycenterMarker = L.marker(baryCoord, {icon: markerGreen}).addTo(map);
   }
-  else if (barycenterMarker.setLatLng(baryCoord));
+  else if (!LeafletBug && clicksOnMap > minClick || LeafletBug && clicksOnMap > minClick && barycenterMarker != undefined){
+    barycenterMarker.setLatLng(baryCoord);
+  }
+  
 }
 
 
@@ -108,7 +112,8 @@ function createGeoJsonFromIsochron(isochron) {
 
 //only keep duplicate values
 function onlyDuplicates(arr){
-  if(clicksOnMap > 1){
+  let minClick = 2;
+  if(!LeafletBug && clicksOnMap > minClick || LeafletBug && clicksOnMap > minClick*2){
     var byID = arr.slice(0);
     byID.sort(function(a,b) {
     var x = a.pointID;
@@ -145,14 +150,15 @@ updateBarycentre();
 }
 
 function updateBarycentre(){
-  if (locations.length > 0 && clicksOnMap > 1){
+  let minClick = 1;
+  if (!LeafletBug && locations.length > 0 && clicksOnMap > minClick || LeafletBug && locations.length > 0 && clicksOnMap > minClick*2){
     callMetro(locations[0].pointID);
     //console.log(locations[0].pointID);
   } 
-  else if (clicksOnMap > 1){
+  else if (!LeafletBug && clicksOnMap > minClick || LeafletBug && clicksOnMap > minClick*2){
     callMetro('1:')
   }
-  if (clicksOnMap <= 1){
+  if (!LeafletBug && clicksOnMap <= minClick || LeafletBug && clicksOnMap <= minClick*2){
     calculating(false)
   }
 }
