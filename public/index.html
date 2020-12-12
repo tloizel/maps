@@ -84,9 +84,9 @@
         <p class='intro'><b>Recharge</b> pour recommencer</p>
 
         <div class='flex-between'>
-            <div id='ad1' class='ad'></div>
+            <div id='ad1' class='webAd'></div>
             <div id='map'></div>
-            <div id='ad2' class='ad'></div>
+            <div id='ad2' class='webAd'></div>
         </div>
 
         <h2>Ton barycentre est</h2>
@@ -94,10 +94,12 @@
 
         <!--<span id='test'>nothing</span>-->
 
-        <div class='flex-center landingpage'>
+        <div class='flex-center landingpage' onclick="window.open('https://barymap.herokuapp.com/','mywindow');" style="cursor: pointer;">
             <img id='appstore' src='appstore.png' alt='appstore' style='width:4vh'>
             <p class='intro'>Télécharge l'application</p>
         </div>
+
+        <div id='ad3' class='mobileAd'></div>
 
         <script src='js/script.js' type='text/javascript'></script>
         <script src='js/security.js' type='text/javascript'></script>
