@@ -1,6 +1,3 @@
-const navitiaToken =  '8088bf3d-6b41-4a23-9f88-185a03876f48' //process.env.navitiaToken;
-const mapboxToken = 'pk.eyJ1IjoidGxvaXplbCIsImEiOiJja2kxdjJqcTcweTZsMnpxa3pucjh0cDlqIn0.ipiemX96csHDUZvs8LELSg' //process.env.mapboxToken; 
-
 // Isochron starting point
 var mapStart = [48.85703068536193, 2.3405350766242536];
 var barycenterMarker;
@@ -8,17 +5,18 @@ var coverage = 'fr-idf';
 
 // Limit isochron duration (required, or may trigger timeout when there is more data)
 var maxDuration = 2000;
+const link = 'J1IjoidGxvaXplbCIsImEiOiJja2kxdjJqcTcweTZsMnpxa3pucjh0cDlqIn0.ipiemX96csHDUZvs8LELSg'; 
 
 
 var map = L.map('map').setView(mapStart, 13);
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_to{link}', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
   maxZoom: 18,
   id: 'mapbox/streets-v11',
   tileSize: 512,
   zoomOffset: -1,
-  accessToken: mapboxToken
+  link: 'ken='+'pk'+'.ey'+link //i tried, please i'm learning
 }).addTo(map);
 
 //marker creation
@@ -37,8 +35,8 @@ var markerGreen = L.icon({
 //interact with map
 function onMapClick(e) {
   L.marker(e.latlng, {icon: markerBlack}).addTo(map);
-  callIso(e.latlng);
-  //console.log(e.latlng)
+  getCallIso(e.latlng) //new
+  //callIso(e.latlng);
   amountClicks();
   calculating(true)
   document.getElementById('test').innerHTML= clicksOnMap + ' clicks and LeafletBug is ' + LeafletBug;
@@ -107,13 +105,13 @@ function createGeoJsonFromIsochron(isochron) {
     locations.push(pointNameCoordDuration);
   });
 
-  //console.log(locations);
   onlyDuplicates(locations);
+
 }
 
 //only keep duplicate values
 function onlyDuplicates(arr){
-  let minClick = 2;
+  let minClick = 1;
   if(!LeafletBug && clicksOnMap > minClick || LeafletBug && clicksOnMap > minClick*2){
     var byID = arr.slice(0);
     byID.sort(function(a,b) {
@@ -153,11 +151,12 @@ updateBarycentre();
 function updateBarycentre(){
   let minClick = 1;
   if (!LeafletBug && locations.length > 0 && clicksOnMap > minClick || LeafletBug && locations.length > 0 && clicksOnMap > minClick*2){
-    callMetro(locations[0].pointID);
+    getCallMetro(locations[0].pointID);
+    //callMetro(locations[0].pointID);
     //console.log(locations[0].pointID);
   } 
   else if (!LeafletBug && clicksOnMap > minClick || LeafletBug && clicksOnMap > minClick*2){
-    callMetro('1:')
+    getCallMetro('1:')
   }
   if (!LeafletBug && clicksOnMap <= minClick || LeafletBug && clicksOnMap <= minClick*2){
     calculating(false)

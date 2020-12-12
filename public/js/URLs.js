@@ -14,37 +14,36 @@ function convertID(dt){
 }
 
 // Call navitia api for isochron
-function callIso(coords){
-    $.ajax({
-        type: 'GET',
-        url: getIsochronUrl(coords),
-        dataType: 'json',
-        headers: {
-        Authorization: 'Basic ' + btoa(navitiaToken)
-        },
-        success: drawIsochron,
-        error: function(xhr, textStatus, errorThrown) {
-            alert('Error when trying to process isochron: "' + textStatus + '", "' + errorThrown + '"');
-        }
-    });
-}
+async function getCallIso(coords){ 
+    const navitiaUrl = getIsochronUrl(coords);
+    const data = {coords, navitiaUrl};
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+          },
+      body: JSON.stringify(data),
+      };
+    const response = await fetch('/GoCallIso', options);
+    const json = await response.json();
+    drawIsochron(json);
+};
 
 // Call navitia api for nearest metro
-function callMetro(stopID){
-    $.ajax({
-        type: 'GET',
-        url: getMetroUrl(stopID),
-        dataType: 'json',
-        headers: {
-            Authorization: 'Basic ' + btoa(navitiaToken)
-        },
-        success: metroIs,
-        error: function(xhr, textStatus, errorThrown) {
-            document.getElementById('res').innerHTML = 'a zoom call';
-        //alert('Error when trying to process isochron: "' + textStatus + '", "' + errorThrown + '"');
-        }
-    });
-}
+async function getCallMetro(stopID){ 
+    const navitiaUrl = getMetroUrl(stopID);
+    const data = {navitiaUrl};
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+          },
+      body: JSON.stringify(data),
+      };
+    const response = await fetch('/GoCallMetro', options);
+    const json = await response.json();
+    metroIs(json);
+};
 
 
 function getBrowser() {
