@@ -5,7 +5,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://barycentre.dev/</loc>
+  <loc>http://barymap.herokuapp.com/</loc>
   <priority>1</priority>
 </url>
 
