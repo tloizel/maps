@@ -5,7 +5,7 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>http://barymap.herokuapp.com/</loc>
+  <loc>https://barymap.herokuapp.com/</loc>
   <priority>1</priority>
 </url>
 
