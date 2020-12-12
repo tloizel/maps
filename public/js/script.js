@@ -5,7 +5,7 @@ var coverage = 'fr-idf';
 
 // Limit isochron duration (required, or may trigger timeout when there is more data)
 var maxDuration = 2000;
-const link = 'J1IjoidGxvaXplbCIsImEiOiJja2kxdjJqcTcweTZsMnpxa3pucjh0cDlqIn0.ipiemX96csHDUZvs8LELSg'; 
+const link = '1IjoidGxvaXplbCIsImEiOiJja2kxdjJqcTcweTZsMnpxa3pucjh0cDlqIn0.ipiemX96csHDUZvs8LELSg'; 
 
 
 var map = L.map('map').setView(mapStart, 13);
@@ -16,7 +16,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_to{l
   id: 'mapbox/streets-v11',
   tileSize: 512,
   zoomOffset: -1,
-  link: 'ken='+'pk'+'.ey'+link //i tried, please i'm learning
+  link: 'ken='+'pk'+'.eyJ'+link //i tried, please i'm learning
 }).addTo(map);
 
 //marker creation
@@ -39,7 +39,7 @@ function onMapClick(e) {
   //callIso(e.latlng);
   amountClicks();
   calculating(true)
-  document.getElementById('test').innerHTML= clicksOnMap + ' clicks and LeafletBug is ' + LeafletBug;
+  //document.getElementById('test').innerHTML= clicksOnMap + ' clicks and LeafletBug is ' + LeafletBug;
 }
 
 map.on('click', onMapClick);
@@ -170,7 +170,7 @@ function metroIs(result) {
     document.getElementById('res').innerHTML = result.places_nearby[0].stop_area.name;
     } 
   else {
-    document.getElementById('res').innerHTML = 'a zoom call';
+    document.getElementById('res').innerHTML = 'un call sur zoom';
   }
   calculating(false);
 }
