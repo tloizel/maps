@@ -38,15 +38,15 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .webAd {
     display: none;
     border: solid lightgrey;
     background-color: lightgrey;
-    width: 120px;
-    height: 50vh;
+    width: 90px;
+    height: 728px;
 }
 
 .mobileAd {
@@ -67,6 +67,10 @@ h2 {
     color: #0ED52D;
 }
 
+#center {
+    width: 100%;
+}
+
 #city {
     font-size: 3vh;
     font-weight: 600;
@@ -76,7 +80,7 @@ h2 {
 
 #map {
     height: 42vh;
-    width: 95%;
+    width: 100%;
     margin: 2vh auto
 }
 
@@ -93,6 +97,8 @@ h2 {
     margin: 1vh;
 }
 
+
+
 @media (min-width: 600px) {
 
     h1 {
@@ -108,10 +114,10 @@ h2 {
         display: none;
     }
 
-    #map {
-      width: calc(95% - 240px);
-      height: 50vh;
+    #center {
+        width: calc(95% - 180px);
     }
+
 
 }
 
