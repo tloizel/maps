@@ -43,8 +43,6 @@ h2 {
 
 .webAd {
     display: none;
-    border: solid lightgrey;
-    background-color: lightgrey;
     width: 90px;
     height: 728px;
 }
