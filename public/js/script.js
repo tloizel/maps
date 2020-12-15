@@ -7,15 +7,22 @@ var coverage = 'fr-idf';
 var maxDuration = 2000;
 const link = '1IjoidGxvaXplbCIsImEiOiJja2kxdjJqcTcweTZsMnpxa3pucjh0cDlqIn0.ipiemX96csHDUZvs8LELSg'; 
 
+//limits to paris
+var corner1 = L.latLng(48.938, 2.160),
+corner2 = L.latLng(48.794, 2.463),
+mybounds = L.latLngBounds(corner1, corner2);
+
 
 var map = L.map('map').setView(mapStart, 13);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_to{link}', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
   maxZoom: 18,
+  minZoom: 12,
   id: 'mapbox/streets-v11',
   tileSize: 512,
   zoomOffset: -1,
+  bounds: mybounds,
   link: 'ken='+'pk'+'.eyJ'+link //i tried, please i'm learning
 }).addTo(map);
 
