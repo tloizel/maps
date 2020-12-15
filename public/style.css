@@ -16,6 +16,10 @@ h2 {
     margin-block-end: 0.2vh;
 }
 
+iframe {
+    max-width: 100%;
+}
+
 .green {
     color: #0ED52D
 }
